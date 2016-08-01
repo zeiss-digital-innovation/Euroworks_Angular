@@ -1,18 +1,27 @@
 nav {
   background-color: rgba(130,25,39,1);
   color: white;
-  height: 50px;
+/*  height: 50px;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 nav a {
   text-decoration: none;
   color: white;
+  line-height: 40px;
+  font-size: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+nav a:hover {
+  background-color: #df691a;
 }
 
 .logo {
-  font-size: larger;
+  font-size: 19px;
 }
