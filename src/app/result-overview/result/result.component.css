@@ -1,0 +1,15 @@
+. card {
+  display: flex;
+  flex-direction: row;
+flex-grow:1;
+}
+
+. card > .overview {
+  display: flex;
+  flex-direction: column;
+}
+
+. card > .details {
+  display: flex;
+  flex-direction: column;
+}
