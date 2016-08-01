@@ -1,0 +1,3 @@
+- http://euroworksdockerserver.cloudapp.net
+
+- http://euroworksdockerserver.cloudapp.net/api/documentation/index.html
