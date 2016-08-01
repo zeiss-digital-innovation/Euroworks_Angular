@@ -1,17 +1,24 @@
-nav {
-  background-color: rgba(130,25,39,1);
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header {
+  background-color: rgba(130, 25, 39, 1);
+  color: rgb(235, 235, 235);
   padding-left: 20px;
   padding-right: 20px;
   font-size: 13px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: rgb(235, 235, 235);
   line-height: 40px;
   padding-left: 15px;
   padding-right: 15px;
