@@ -1,0 +1,18 @@
+nav {
+  background-color: rgba(130,25,39,1);
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  font-size: larger;
+}
