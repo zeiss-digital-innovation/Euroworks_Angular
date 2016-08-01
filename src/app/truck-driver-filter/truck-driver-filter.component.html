@@ -1,3 +1,16 @@
-<p>
-  truck-driver-filter works!
-</p>
+<form>
+  <section class="">
+    <div class="cb">
+      <labeled-checkbox [(frachtbrief)]="checked" label="Frachtbrief"></labeled-checkbox>
+      <labeled-checkbox id="gabelstaplerschein" label="Gabelstaplerschein"></labeled-checkbox>
+      <labeled-checkbox id="gefahrgutschein" label="Gefahrgutschein"></labeled-checkbox>
+      <labeled-checkbox id="berufskraftfahrer" label="Berufskraftfahrer"></labeled-checkbox>
+    
+    </div>
+    <div class="inputs"></div>
+  </section>
+  <section class="personenDaten"></section>
+  <section class="controls">
+    <button (click)="test()">Test</button>
+  </section>
+</form>
