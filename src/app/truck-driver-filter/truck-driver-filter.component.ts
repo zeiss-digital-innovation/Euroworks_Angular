@@ -27,11 +27,6 @@ export class TruckDriverFilterComponent  {
     alert("Haha!!!");
   }
 
-
-}
-
-
-
 	drivingLicenceClasses: Array<ComboboxOption> = [
 		new ComboboxOption("C1"),
 		new ComboboxOption("C"),
@@ -40,9 +35,4 @@ export class TruckDriverFilterComponent  {
 	];
 
 	selectedDrivingLicense: string;
-
-
-	test() {
-		console.log('frachtbrief:' + this.frachtbrief);
-	}
 }
