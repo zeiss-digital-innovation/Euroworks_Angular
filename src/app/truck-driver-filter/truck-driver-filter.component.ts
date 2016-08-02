@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LabeledCheckboxComponent } from './labeled-checkbox.component';
+import {TruckFilter} from "../shared/TruckFilter";
 
 @Component({
   moduleId: module.id,
@@ -15,7 +16,13 @@ export class TruckDriverFilterComponent  {
   gefahrgutschein: boolean;
   berufskraftfahrer: boolean;
 
- test() {
-   console.log('frachtbrief:' + this.frachtbrief);
- }
+  public filter: TruckFilter;
+
+  constructor() {
+    this.filter = new TruckFilter();
+  }
+
+
+
 }
+

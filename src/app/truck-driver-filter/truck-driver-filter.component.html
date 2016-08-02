@@ -1,12 +1,24 @@
 <form>
   <section class="">
+
+    <!-- check boxes -->
     <div class="cb">
-      <labeled-checkbox [(checked)]="frachtbrief" label="Frachtbrief"></labeled-checkbox>
-      <labeled-checkbox [(checked)]="gabelstaplerschein" label="Gabelstaplerschein"></labeled-checkbox>
-      <labeled-checkbox [(checked)]="gefahrgutschein" label="Gefahrgutschein"></labeled-checkbox>
-      <labeled-checkbox [(checked)]="berufskraftfahrer" label="Berufskraftfahrer"></labeled-checkbox>
+      <labeled-checkbox [(checked)]="truckFilter.BillOfLading" label="Frachtbrief"></labeled-checkbox>
+      <labeled-checkbox [(checked)]="truckFilter.ForkLiftLicense" label="Gabelstaplerschein"></labeled-checkbox>
+      <labeled-checkbox [(checked)]="truckFilter.DangerousDrivingLicense" label="Gefahrgutschein"></labeled-checkbox>
+      <labeled-checkbox [(checked)]="truckFilter.ProfessionalDriver" label="Berufskraftfahrer"></labeled-checkbox>
+    </div>
+
+    <!-- combox boxes -->
+    <div>
 
     </div>
+
+    <!-- person data -->
+    <div>
+
+    </div>
+
     <div class="inputs"></div>
   </section>
   <section class="personenDaten"></section>
