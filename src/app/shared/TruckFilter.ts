@@ -7,5 +7,6 @@ export class TruckFilter {
   ForkLiftLicense: Boolean;
   DangerousDrivingLicense: Boolean;
   BillOfLading: Boolean;
+  DrivingLicense: string;
   DriverProperties: Array<string>;
 }
