@@ -7,7 +7,10 @@
       <labeled-checkbox [(checked)]="berufskraftfahrer" label="Berufskraftfahrer"></labeled-checkbox>
 
     </div>
-    <div class="inputs"></div>
+		<div class="inputs">
+		  <ew-combobox [options]="drivingLicenceClasses" ></ew-combobox>
+
+		</div>
   </section>
   <section class="personenDaten"></section>
   <section class="controls">
