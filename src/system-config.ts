@@ -39,6 +39,7 @@ const barrels: string[] = [
   'app/truck-driver-filter',
   'app/ew-header',
   'app/ew-content',
+  'app/result-overview/result/detail-row',
   /** @cli-barrel */
 ];
 
