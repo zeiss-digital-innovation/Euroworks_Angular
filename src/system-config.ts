@@ -40,6 +40,7 @@ const barrels: string[] = [
   'app/ew-header',
   'app/ew-content',
   'app/ew-combobox',
+  'app/result-overview/result/detail-row',
   /** @cli-barrel */
 ];
 

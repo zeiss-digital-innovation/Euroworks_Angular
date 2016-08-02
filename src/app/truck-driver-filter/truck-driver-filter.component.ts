@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { LabeledCheckboxComponent } from './labeled-checkbox.component';
 import { ComboboxComponent, ComboboxOption } from '../ew-combobox';
 
+import {TruckFilter} from "../shared/TruckFilter";
+
 
 @Component({
   moduleId: module.id,
@@ -12,7 +14,22 @@ import { ComboboxComponent, ComboboxOption } from '../ew-combobox';
 })
 export class TruckDriverFilterComponent  {
 
-  frachtbrief: boolean = true;
+  public filter: TruckFilter;
+
+  constructor() {
+    this.filter = new TruckFilter();
+  }
+
+  public startSearch(){
+
+    console.log(this.filter);
+
+    alert("Haha!!!");
+  }
+
+
+}
+
 
 
 	drivingLicenceClasses: Array<ComboboxOption> = [
