@@ -5,8 +5,8 @@ import {Component, Input, Output, EventEmitter } from '@angular/core';
         selector: 'labeled-checkbox',
         template: `
             <div>
-                <label for="cb">{{label}}</label>
                 <input id="cb" type="checkbox" [(ngModel)]="checked" (ngModelChange)="checkedChange.emit($event)"/>
+                <label for="cb">{{label}}</label>
             </div>
         `
     }

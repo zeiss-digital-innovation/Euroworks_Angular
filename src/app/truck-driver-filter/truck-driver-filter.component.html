@@ -1,3 +1,4 @@
+
 <form>
   <section class="">
 
@@ -11,15 +12,34 @@
 
     <!-- combox boxes -->
     <div>
-
+      <select></select>
     </div>
 
     <!-- person data -->
     <div>
+        <div>
+          <label>Vorname</label>
+          <input type="text" [(ngModel)]="filter.PersonInformation.FirstName">
+        </div>
+        <div>
+          <label>Nachname</label>
+          <input type="text" [(ngModel)]="filter.PersonInformation.LastName">
 
+        <div>
+          <label>Geburtsdatum</label>
+          <input type="text" [(ngModel)]="filter.PersonInformation.BirthDate">
+        </div>
+        <div>
+        <label>EMail</label>
+        <input type="text" [(ngModel)]="filter.PersonInformation.Email">
+        </div>
+        <div>
+          <label>Land</label>
+          <input type="text" [(ngModel)]="filter.PersonInformation.LivingCountryCode">
+        </div>
     </div>
 
-    <div class="inputs"></div>
+    </div>
   </section>
   <section class="personenDaten"></section>
   <section class="controls">

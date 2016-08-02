@@ -1,7 +1,7 @@
 import {Person} from "./Person";
 
 export class TruckFilter {
-  PersonInformation: Person;
+  PersonInformation: Person = new Person();
   DriverProfileCreatedAt: Date;
   ProfessionalDriver: Boolean;
   ForkLiftLicense: Boolean;

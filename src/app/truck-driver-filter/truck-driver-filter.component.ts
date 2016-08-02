@@ -18,6 +18,9 @@ export class TruckDriverFilterComponent  {
   }
 
   public startSearch(){
+
+    console.log(this.filter);
+
     alert("Haha!!!");
   }
 
