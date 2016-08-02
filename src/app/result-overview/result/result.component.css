@@ -1,15 +1,29 @@
-. card {
+.card {
   display: flex;
-  flex-direction: row;
-flex-grow:1;
+  flex-grow:1;
+  background-color: green;
+  width:200px;
+  height:100px;
+  margin:5px;
 }
 
-. card > .overview {
+.driver {
   display: flex;
   flex-direction: column;
+  width:50%;
+}
+.topdown {
+  height:50%;
 }
 
-. card > .details {
-  display: flex;
-  flex-direction: column;
+.details {
+  background-color: red;
+}
+
+.a {
+  background-color: yellow;
+}
+
+.b {
+  background-color: blueviolet;
 }
