@@ -10,7 +10,10 @@ import { LabeledCheckboxComponent } from './labeled-checkbox.component';
 })
 export class TruckDriverFilterComponent  {
 
-  frachtbrief: boolean = true;
+  frachtbrief: boolean;
+  gabelstaplerschein: boolean;
+  gefahrgutschein: boolean;
+  berufskraftfahrer: boolean;
 
  test() {
    console.log('frachtbrief:' + this.frachtbrief);
