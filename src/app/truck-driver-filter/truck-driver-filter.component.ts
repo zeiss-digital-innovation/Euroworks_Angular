@@ -11,17 +11,15 @@ import {TruckFilter} from "../shared/TruckFilter";
 })
 export class TruckDriverFilterComponent  {
 
-  frachtbrief: boolean;
-  gabelstaplerschein: boolean;
-  gefahrgutschein: boolean;
-  berufskraftfahrer: boolean;
-
   public filter: TruckFilter;
 
   constructor() {
     this.filter = new TruckFilter();
   }
 
+  public startSearch(){
+    alert("Haha!!!");
+  }
 
 
 }

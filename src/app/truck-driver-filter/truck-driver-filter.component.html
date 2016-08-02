@@ -3,10 +3,10 @@
 
     <!-- check boxes -->
     <div class="cb">
-      <labeled-checkbox [(checked)]="truckFilter.BillOfLading" label="Frachtbrief"></labeled-checkbox>
-      <labeled-checkbox [(checked)]="truckFilter.ForkLiftLicense" label="Gabelstaplerschein"></labeled-checkbox>
-      <labeled-checkbox [(checked)]="truckFilter.DangerousDrivingLicense" label="Gefahrgutschein"></labeled-checkbox>
-      <labeled-checkbox [(checked)]="truckFilter.ProfessionalDriver" label="Berufskraftfahrer"></labeled-checkbox>
+      <labeled-checkbox [(checked)]="filter.BillOfLading" label="Frachtbrief"></labeled-checkbox>
+      <labeled-checkbox [(checked)]="filter.ForkLiftLicense" label="Gabelstaplerschein"></labeled-checkbox>
+      <labeled-checkbox [(checked)]="filter.DangerousDrivingLicense" label="Gefahrgutschein"></labeled-checkbox>
+      <labeled-checkbox [(checked)]="filter.ProfessionalDriver" label="Berufskraftfahrer"></labeled-checkbox>
     </div>
 
     <!-- combox boxes -->
@@ -23,6 +23,6 @@
   </section>
   <section class="personenDaten"></section>
   <section class="controls">
-    <button (click)="test()">Test</button>
+    <button (click)="startSearch()">Suchen</button>
   </section>
 </form>
