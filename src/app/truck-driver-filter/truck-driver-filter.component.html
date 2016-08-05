@@ -19,15 +19,15 @@
     <div>
         <div>
           <label>Vorname</label>
-          <input type="text" [(ngModel)]="filter.PersonInformation.FirstName">
+          <input type="text" pInputText [(ngModel)]="filter.PersonInformation.FirstName">
         </div>
         <div>
           <label>Nachname</label>
-          <input type="text" [(ngModel)]="filter.PersonInformation.LastName">
+          <input type="text" pInputText [(ngModel)]="filter.PersonInformation.LastName">
 
         <div>
           <label>Geburtsdatum</label>
-          <input type="text" [(ngModel)]="filter.PersonInformation.BirthDate">
+          <input type="text" pInputText [(ngModel)]="filter.PersonInformation.BirthDate">
         </div>
         <div>
         <label>EMail</label>
@@ -44,6 +44,6 @@
   </section>
   <section class="personenDaten"></section>
   <section class="controls">
-    <button (click)="startSearch()">Suchen</button>
+    <button (click)="startSearch()" pButton>Suchen</button>
   </section>
 </form>
