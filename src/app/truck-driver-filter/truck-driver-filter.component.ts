@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { LabeledCheckboxComponent } from './labeled-checkbox.component';
 import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 import { MultiSelect, Button, SelectItem } from 'primeng/primeng';
-
-import {TruckFilter} from '../shared/TruckFilter';
+import { TruckFilter } from '../shared/TruckFilter';
 
 
 @Component({
@@ -28,8 +27,24 @@ export class TruckDriverFilterComponent  {
   }
 
   public startSearch(form: any) {
+    if(form) {
 
-    console.log(form.value);
+      const personenDaten = form.value.personenDaten;
+
+      this.filter.PersonInformation.FirstName = personenDaten.nachname;
+      this.filter.PersonInformation.LastName = personenDaten.vorname;
+      this.filter.PersonInformation.BirthDate = personenDaten.gebDatum;
+      this.filter.PersonInformation.Email = personenDaten.email;
+      this.filter.PersonInformation.LivingCountryCode = personenDaten.land;
+
+      const skills = form.value.skills;
+      this.filter.BillOfLading = skills.frachtbrief;
+      this.filter.ForkLiftLicense = skills.gabelstaplerschein;
+      this.filter.DangerousDrivingLicense = skills.gefahrgutschein;
+      this.filter.ProfessionalDriver = skills.berufskraftfahrer;
+
+      this.filter.DrivingLicense = form.value.selectedLicense.join(',');
+    }
   }
 
 }
