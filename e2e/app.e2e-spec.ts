@@ -14,16 +14,16 @@ describe('App routing tests', function() {
     aboutPage = new AboutPage();
     contactPage = new ContactPage();
     searchPage = new SearchPage();
+
+    appPage.navigateTo();
   });
 
   it('should display search by default', () => {
-    appPage.navigateTo();
     expect(browser.getCurrentUrl()).toContain('/search');
     expect(searchPage.isDisplayed()).toBe(true);
   });
 
   it('should be able to navigate to about page', () => {
-    appPage.navigateTo();
     appPage.clickAboutLink().then(() => {
       expect(browser.getCurrentUrl()).toContain('/about');
       expect(aboutPage.isDisplayed()).toBe(true);
@@ -31,7 +31,6 @@ describe('App routing tests', function() {
   });
 
   it('should be able to navigate to contact page', () => {
-    appPage.navigateTo();
     appPage.clickContactLink().then(() => {
       expect(browser.getCurrentUrl()).toContain('/contact');
       expect(contactPage.isDisplayed()).toBe(true);
@@ -39,7 +38,6 @@ describe('App routing tests', function() {
   });
 
   it('should be able to navigate to search page', () => {
-    appPage.navigateTo();
     appPage.clickSearchLink().then(() => {
       expect(browser.getCurrentUrl()).toContain('/search');
       expect(searchPage.isDisplayed()).toBe(true);
@@ -47,7 +45,6 @@ describe('App routing tests', function() {
   });
 
   it('should be able to navigate to root page and display search page', () => {
-    appPage.navigateTo();
     appPage.clickRootLink().then(() => {
       expect(browser.getCurrentUrl()).toContain('/search');
       expect(searchPage.isDisplayed()).toBe(true);
