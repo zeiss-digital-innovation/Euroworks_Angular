@@ -3,3 +3,8 @@ body {
   color: rgb(235, 235, 235);
   margin: 0;
 }
+
+section.content {
+  background-color: #2b3e50;
+  padding: 20px;
+}

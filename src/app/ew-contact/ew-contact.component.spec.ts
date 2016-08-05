@@ -3,11 +3,11 @@
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { addProviders, async, inject } from '@angular/core/testing';
-import { EwContentComponent } from './ew-content.component';
+import { EwContactComponent } from './ew-contact.component';
 
-describe('Component: EwContent', () => {
+describe('Component: EwContact', () => {
   it('should create an instance', () => {
-    let component = new EwContentComponent();
+    let component = new EwContactComponent();
     expect(component).toBeTruthy();
   });
 });
