@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Http} from "@angular/http";
-import {BehaviorSubject} from "rxjs";
+import {Http, Response} from "@angular/http";
+import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {FilterProperties} from "./filter-properties";
 
 @Injectable()
@@ -12,8 +12,9 @@ export class GetPropertiesService {
   }
 
   get properties() {
+
     const newProperties = this.http.get("http://euroworksdockerserver.cloudapp.net/api/Driver/properties")
-      .map(data => data.json())
+      .map((res: Response) => res.json())
       .map(jsonData => {
         let resultProperties = new FilterProperties();
 

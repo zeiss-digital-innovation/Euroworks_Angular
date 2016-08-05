@@ -2,7 +2,10 @@
 
 import {addProviders, async, inject} from '@angular/core/testing';
 import {GetPropertiesService} from './get-properties.service';
-import {Http} from "@angular/http/esm";
+import {Http} from "@angular/http";
+import {Observable} from "rxjs/Observable";
+import 'rxjs/add/operator/share';
+import 'rxjs/add/observable/of';
 
 describe('Service: GetProperties', () => {
   beforeEach(() => {
@@ -62,7 +65,9 @@ class MockHttp {
   };
 
   get(url: String) {
-    return `[
+    return Observable.of({
+      json: function () {
+        return JSON.parse(`[
   {
     "propertyType": "Coachworks",
     "propertyValues": {
@@ -108,6 +113,8 @@ class MockHttp {
       "4": "Even"
     }
   }
-]`;
+]`)
+      }
+    });
   }
 }
