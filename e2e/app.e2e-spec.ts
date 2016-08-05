@@ -1,7 +1,7 @@
 import { AppPage } from './app.po';
 import { AboutPage } from "./about.po";
-import {ContactPage} from "./contact.po";
-import {SearchPage} from "./search.po";
+import { ContactPage } from "./contact.po";
+import { SearchPage } from "./search.po";
 
 describe('App routing tests', function() {
   let appPage: AppPage;
