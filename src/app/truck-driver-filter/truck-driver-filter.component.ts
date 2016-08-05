@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LabeledCheckboxComponent } from './labeled-checkbox.component';
 import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
-import { MultiSelect, Button, SelectItem } from 'primeng/primeng';
+import { MultiSelect, Button, SelectItem, InputText } from 'primeng/primeng';
 
 import {TruckFilter} from '../shared/TruckFilter';
 
@@ -11,7 +11,7 @@ import {TruckFilter} from '../shared/TruckFilter';
   selector: 'ew-truck-driver-filter',
   templateUrl: 'truck-driver-filter.component.html',
   styleUrls: ['truck-driver-filter.component.css'],
-  directives: [LabeledCheckboxComponent, Button, MultiSelect, REACTIVE_FORM_DIRECTIVES]
+  directives: [LabeledCheckboxComponent, Button, InputText, MultiSelect, REACTIVE_FORM_DIRECTIVES]
 })
 export class TruckDriverFilterComponent  {
   licenses: SelectItem[] = [];

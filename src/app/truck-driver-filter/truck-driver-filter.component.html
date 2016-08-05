@@ -1,51 +1,61 @@
 <form #searchForm="ngForm" (ngSubmit)="startSearch(searchForm.form)" > 
 
+<section class="searchForm">
     <!-- check boxes -->
-    <div formGroupName="skills">
-      <label>
+    <div formGroupName="skills" class="searchSkill">
+      <span>
         <input type="checkbox" name="frachtbrief" ngModel>
-      </label>
-      <label>
+        <label>Frachtbrief</label>
+      </span>
+      
+      <span>
         <input type="checkbox" name="gabelstaplerschein" ngModel>
-      </label>
-      <label>
+        <label>Gabelstaplerschein</label>
+      </span>
+
+      <span>
         <input type="checkbox" name="gefahrgutschein" ngModel>
-      </label>
-      <label>
+        <label>Gefahrgutschein</label>
+      </span>
+
+      <span>
         <input type="checkbox" name="berufskraftfahrer" ngModel>
-      </label>
+        <label>Berufskraftfahrer</label>
+      </span>      
     </div>
 
     <!-- combox boxes -->
-    <div>
-      <p-multiSelect [options]="licenses" name="selectedLicense" [(ngModel)]="selectedLicense"></p-multiSelect>
-    </div>
-
+      <span class="searchLicense">
+        <label>Führerscheinlizenz</label>
+        <p-multiSelect [options]="licenses" name="selectedLicense" [(ngModel)]="selectedLicense"></p-multiSelect>
+      </span>
+   
     <!-- person data -->
-    <div formGroupName="personenDaten">
+    <div formGroupName="personenDaten" class="searchPersonen">
         <div>
           <label>Vorname</label>
-          <input type="text" ngModel name="vorname">
+          <input pInputText type="text" ngModel name="vorname">
         </div>
         <div>
           <label>Nachname</label>
-          <input type="text" ngModel name="nachname">
+          <input pInputText type="text" ngModel name="nachname">
           </div>
         <div>
           <label>Geburtsdatum</label>
-          <input type="text" ngModel name="gebDatum">
+          <input pInputText type="text" ngModel name="gebDatum">
         </div>
         <div>
-        <label>EMail</label>
-        <input type="email" ngModel name="email">
+        <label>E-Mail</label>
+        <input pInputText type="email" ngModel name="email">
         </div>
         <div>
           <label>Land</label>
-          <input type="text" ngModel name="land">
+          <input pInputText type="text" ngModel name="land">
         </div>
     </div>
+  </section>
 
-  <section class="controls">
+  <section class="searchControls">
     <button type="submit" pButton label="Suchen"></button>
   </section>
 </form>
