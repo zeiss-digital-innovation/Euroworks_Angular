@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LabeledCheckboxComponent } from './labeled-checkbox.component';
 import { ComboboxComponent, ComboboxOption } from '../ew-combobox';
-import {InputText} from 'primeng/primeng';
+import {InputText, Button} from 'primeng/primeng';
 
 import {TruckFilter} from "../shared/TruckFilter";
 
@@ -11,7 +11,7 @@ import {TruckFilter} from "../shared/TruckFilter";
   selector: 'ew-truck-driver-filter',
   templateUrl: 'truck-driver-filter.component.html',
   styleUrls: ['truck-driver-filter.component.css'],
-  directives: [LabeledCheckboxComponent, ComboboxComponent, InputText]
+  directives: [LabeledCheckboxComponent, ComboboxComponent, InputText, Button]
 })
 export class TruckDriverFilterComponent  {
 

@@ -31,11 +31,11 @@
         </div>
         <div>
         <label>EMail</label>
-        <input type="text" [(ngModel)]="filter.PersonInformation.Email">
+        <input type="text" pInputText [(ngModel)]="filter.PersonInformation.Email">
         </div>
         <div>
           <label>Land</label>
-          <input type="text" [(ngModel)]="filter.PersonInformation.LivingCountryCode">
+          <input type="text" pInputText [(ngModel)]="filter.PersonInformation.LivingCountryCode">
         </div>
     </div>
 
@@ -44,6 +44,6 @@
   </section>
   <section class="personenDaten"></section>
   <section class="controls">
-    <button (click)="startSearch()" pButton>Suchen</button>
+    <button (click)="startSearch()" pButton label="Suchen"></button>
   </section>
 </form>
