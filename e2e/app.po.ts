@@ -1,9 +1,22 @@
-export class EuroworksAngular2Page {
+export class AppPage {
   navigateTo() {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  clickRootLink() {
+    return element(by.css('#rootLink')).click();
   }
+
+  clickSearchLink() {
+    return element(by.css('#searchLink')).click();
+  }
+
+  clickAboutLink() {
+    return element(by.css('#aboutLink')).click();
+  }
+
+  clickContactLink() {
+    return element(by.css('#contactLink')).click();
+  }
+
 }

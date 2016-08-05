@@ -1,9 +1,9 @@
 <header>
   <nav>
-    <a [routerLink]="['/']"><span class="logo">EuroWorks</span></a>
-    <a [routerLink]="['search']">Start</a>
-    <a [routerLink]="['about']">Über</a>
-    <a [routerLink]="['contact']">Kontakt</a>
+    <a id="rootLink" [routerLink]="['/']"><span class="logo">EuroWorks</span></a>
+    <a id="searchLink" [routerLink]="['search']">Start</a>
+    <a id="aboutLink" [routerLink]="['about']">Über</a>
+    <a id="contactLink" [routerLink]="['contact']">Kontakt</a>
     <span>john.doe@acme.com</span>
     <img src="images/boss32.png"/>
     <a href="#" (click)="logout()">Logout</a>
