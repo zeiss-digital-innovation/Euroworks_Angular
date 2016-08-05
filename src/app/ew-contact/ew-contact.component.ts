@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-ew-contact',
+  selector: 'ew-contact',
   templateUrl: 'ew-contact.component.html',
   styleUrls: ['ew-contact.component.css']
 })
