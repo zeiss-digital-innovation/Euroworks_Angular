@@ -1,49 +1,61 @@
+<form #searchForm="ngForm" (ngSubmit)="startSearch(searchForm.form)" > 
 
-<form>
-  <section class="">
-
+<section class="searchForm">
     <!-- check boxes -->
-    <div class="cb">
-      <labeled-checkbox [(checked)]="filter.BillOfLading" label="Frachtbrief"></labeled-checkbox>
-      <labeled-checkbox [(checked)]="filter.ForkLiftLicense" label="Gabelstaplerschein"></labeled-checkbox>
-      <labeled-checkbox [(checked)]="filter.DangerousDrivingLicense" label="Gefahrgutschein"></labeled-checkbox>
-      <labeled-checkbox [(checked)]="filter.ProfessionalDriver" label="Berufskraftfahrer"></labeled-checkbox>
+    <div formGroupName="skills" class="searchSkill">
+      <span>
+        <input type="checkbox" name="frachtbrief" ngModel>
+        <label>Frachtbrief</label>
+      </span>
+      
+      <span>
+        <input type="checkbox" name="gabelstaplerschein" ngModel>
+        <label>Gabelstaplerschein</label>
+      </span>
+
+      <span>
+        <input type="checkbox" name="gefahrgutschein" ngModel>
+        <label>Gefahrgutschein</label>
+      </span>
+
+      <span>
+        <input type="checkbox" name="berufskraftfahrer" ngModel>
+        <label>Berufskraftfahrer</label>
+      </span>      
     </div>
 
     <!-- combox boxes -->
-    <div>
-        <ew-combobox [options]="drivingLicenceClasses" [(value)]="filter.DrivingLicense"></ew-combobox>
-    </div>
-
+      <span class="searchLicense">
+        <label>Führerscheinlizenz</label>
+        <p-multiSelect [options]="licenses" name="selectedLicense" [(ngModel)]="selectedLicense"></p-multiSelect>
+      </span>
+   
     <!-- person data -->
-    <div>
+    <div formGroupName="personenDaten" class="searchPersonen">
         <div>
           <label>Vorname</label>
-          <input type="text" pInputText [(ngModel)]="filter.PersonInformation.FirstName">
+          <input pInputText type="text" ngModel name="vorname">
         </div>
         <div>
           <label>Nachname</label>
-          <input type="text" pInputText [(ngModel)]="filter.PersonInformation.LastName">
-
+          <input pInputText type="text" ngModel name="nachname">
+          </div>
         <div>
           <label>Geburtsdatum</label>
-          <input type="text" pInputText [(ngModel)]="filter.PersonInformation.BirthDate">
+          <input pInputText type="text" ngModel name="gebDatum">
         </div>
         <div>
-        <label>EMail</label>
-        <input type="text" pInputText [(ngModel)]="filter.PersonInformation.Email">
+        <label>E-Mail</label>
+        <input pInputText type="email" ngModel name="email">
         </div>
         <div>
           <label>Land</label>
-          <input type="text" pInputText [(ngModel)]="filter.PersonInformation.LivingCountryCode">
+          <input pInputText type="text" ngModel name="land">
         </div>
     </div>
-
-    </div>
-
   </section>
-  <section class="personenDaten"></section>
-  <section class="controls">
-    <button (click)="startSearch()" pButton label="Suchen"></button>
+
+  <section class="searchControls">
+    <button type="submit" pButton label="Suchen"></button>
   </section>
 </form>

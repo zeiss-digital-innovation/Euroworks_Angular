@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { LabeledCheckboxComponent } from './labeled-checkbox.component';
-import { ComboboxComponent, ComboboxOption } from '../ew-combobox';
-import {InputText, Button} from 'primeng/primeng';
-
-import {TruckFilter} from "../shared/TruckFilter";
+import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
+import { MultiSelect, Button, SelectItem, InputText } from 'primeng/primeng';
+import {TruckFilter} from '../shared/TruckFilter';
 
 
 @Component({
@@ -11,29 +10,41 @@ import {TruckFilter} from "../shared/TruckFilter";
   selector: 'ew-truck-driver-filter',
   templateUrl: 'truck-driver-filter.component.html',
   styleUrls: ['truck-driver-filter.component.css'],
-  directives: [LabeledCheckboxComponent, ComboboxComponent, InputText, Button]
+  directives: [LabeledCheckboxComponent, Button, InputText, MultiSelect, REACTIVE_FORM_DIRECTIVES]
 })
 export class TruckDriverFilterComponent  {
+  licenses: SelectItem[] = [];
+  selectedLicense: string[];
 
   public filter: TruckFilter;
 
   constructor() {
     this.filter = new TruckFilter();
+    this.licenses.push({label: 'C1', value: 'C1'});
+    this.licenses.push({label: 'C', value: 'C'});
+    this.licenses.push({label: 'C1E', value: 'C1E'});
+    this.licenses.push({label: 'CE', value: 'CE'});
   }
 
-  public startSearch(){
+  public startSearch(form: any) {
+    if(form) {
 
-    console.log(this.filter);
+      const personenDaten = form.value.personenDaten;
 
-    alert("Haha!!!");
+      this.filter.PersonInformation.FirstName = personenDaten.nachname;
+      this.filter.PersonInformation.LastName = personenDaten.vorname;
+      this.filter.PersonInformation.BirthDate = personenDaten.gebDatum;
+      this.filter.PersonInformation.Email = personenDaten.email;
+      this.filter.PersonInformation.LivingCountryCode = personenDaten.land;
+
+      const skills = form.value.skills;
+      this.filter.BillOfLading = skills.frachtbrief;
+      this.filter.ForkLiftLicense = skills.gabelstaplerschein;
+      this.filter.DangerousDrivingLicense = skills.gefahrgutschein;
+      this.filter.ProfessionalDriver = skills.berufskraftfahrer;
+
+      this.filter.DrivingLicense = form.value.selectedLicense.join(',');
+    }
   }
 
-	drivingLicenceClasses: Array<ComboboxOption> = [
-		new ComboboxOption("C1"),
-		new ComboboxOption("C"),
-		new ComboboxOption("C1E"),
-		new ComboboxOption("CE")
-	];
-
-	selectedDrivingLicense: string;
 }

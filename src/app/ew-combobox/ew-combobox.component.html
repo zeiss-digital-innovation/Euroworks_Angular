@@ -1,5 +1,3 @@
-<div>
-	<select>
-		<option *ngFor="let element of options" value="{{element.id}}">{{element.title}}</option>
-	</select>
-</div>
+<select name="{{name}}" ngModel>
+	<option *ngFor="let element of options" value="{{element.id}}">{{element.title}}</option>
+</select>

@@ -1,0 +1,33 @@
+form {
+    margin: 0 0 20px 0;
+}
+
+.searchForm, .searchSkill, .searchLicense, .searchPersonen {
+    display: flex;
+    width: 100%;
+}
+
+.searchSkill, .searchLicense, .searchPersonen, .searchControls {
+    flex-direction: column;
+}
+
+.searchSkill, .searchLicense {
+    width: 20%;
+    min-width: 250px;
+}
+
+.searchPersonen label {
+    width: 120px;
+    padding: 0 5px 0 0;
+}
+
+.searchPersonen div {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    margin: 0 0 5px 0;
+}
+
+p-multiselect {
+    margin: 10px 0 0 0;
+}
